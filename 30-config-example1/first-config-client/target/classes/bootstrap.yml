@@ -1,0 +1,14 @@
+management:
+  security:
+    enabled: false
+spring:
+  #application:
+  #  name: config-client
+  cloud:
+    config:
+      url: http://localhost:8888
+      profile: dev,zuul # config-client-dev.yml
+      name: config-client
+      label: client-label
+      # name: config-client2 # config-client2-dev.yml
+      # 没有 cloud.config.name，也没有 application.name，则读取 application-dev.yml
