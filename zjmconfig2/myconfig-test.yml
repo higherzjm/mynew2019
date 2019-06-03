@@ -1,0 +1,3 @@
+test:
+  mysql:
+    username: root_test

@@ -1,4 +1,0 @@
-test:
-  mysql:
-    username: root
-	password: 654321
