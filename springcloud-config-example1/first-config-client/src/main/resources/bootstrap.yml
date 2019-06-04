@@ -1,0 +1,17 @@
+management:
+  security:
+    enabled: false
+spring:
+  #application:
+    #name: zjm-config
+  cloud:
+    config:
+      #url: http://localhost:8888/  #读取配置文件服务端的地址
+      profile: dev # 文件版本类型
+      name: zjm-config #文件名称(前缀)，跟profile结合在一起就是zjm-config-dev.yml 或zjm-config-dev.properties
+      # 没有 cloud.config.name，也没有 application.name，则读取 application-dev.yml 或application-dev.properties
+      # 如果没有cloud.config.name，也没有 application.name，也没有 cloud.config.profile 则读取 application.yml 或application.properties
+      # 如果存在一样前缀名称的properties和yml文件，会优先读取properties为后缀的文件
+      label: master #所属仓库
+      discovery:
+        service-id: configserver #服务端应用id
